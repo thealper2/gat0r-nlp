@@ -1,8 +1,11 @@
+
+<img src="https://github.com/thealper2/gat0r-nlp/blob/main/flask/logo.jpg" alt="alt text" width="320" height="280">
+
 Bu çalışma, Teknofest 2023 Türkçe Doğal Dil İşleme yarışması kategorisinde "Aşağılayıcı Dil Tespiti" için geliştirilmiş. 
 ### AMAÇ 
 
 Türkçe Doğal Dil İşleme ile özellikle Türkçe metinlerin işlenmesi için gerekli kullanıcı dostu ve yüksek performanslı kütüphanelerin, veri kümelerinin hazırlanmasına katkı sağlamak amaçlanmaktadır. Aşağılayıcı Söylemlerin Doğal Dil İşleme İle Tespiti sağlanacaktır. 
-# Adım 1 Veri setini inceleyelim
+### Adım 1 Veri setini inceleyelim
 
 | # |  Column   |Non-Null| Count|  Dtype |
 |---|  ------ |  --------|------ | -----  |
@@ -18,9 +21,9 @@ Türkçe Doğal Dil İşleme ile özellikle Türkçe metinlerin işlenmesi için
 
 %28.7 si Other sınıfının içerisindeyken %71.3'ü Irkçı, cinsiyetçi, Sexist,Küfür sınıfının içerisindedir.
 
-<img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img2.png" alt="alt text" width="620" height="280">
+<img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img2.png" alt="alt text" width="620" height="280" >
 
-#### Adım 2 veri seti temizlenmiştir
+### Adım 2 veri seti temizlenmiştir
 
 ```
 def preprocess_text(text):
@@ -46,7 +49,7 @@ def preprocess_text(text):
     return text
 ```
 
-#### Adım 3 Veri setini temizledikten sonra ön işleme adımlarından olan tokenize,mapping ve encoder dönüşümünü yapılmıştır.
+### Adım 3 Veri setini temizledikten sonra ön işleme adımlarından olan tokenize,mapping ve encoder dönüşümünü yapılmıştır.
 ```
 from sklearn.preprocessing import LabelEncoder
 # LabelEncoder kullanarak "target" sütunumuza dönüşüm yaptırdık.
@@ -59,18 +62,18 @@ df["labels"] = df["target"].apply(lambda x: le_nm[x])
 df = df.drop(['id', 'text', 'target'], axis=1)
 !pip install transformers
 ```
-#### "Name Mapping" işleminden sonra veri setimizin ilk 5 elemanı inceleyelim.
+### Adım 4 "Name Mapping" işleminden sonra veri setimizin ilk 5 elemanı inceleyelim.
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img0.png" alt="alt text" width="420" height="280">
 
-#### Adım 5 model seçimi yapılmıştır. 
+### Adım 5 model seçimi yapılmıştır. 
 Bert (Bidirectional Encoder Representations from Transformers) modeli, doğal dil işlemede son derece başarılı bir modeldir ve birçok farklı NLP görevinde kullanılabilir.Bert modelini tercih etmeden önce Google Schloar'dan makaleler incelenerek literatür taraması yapılmıştır proje için en uygun model BERT olduğuna karar verilmiştir. Bu model, özellikle kelime anlamının bağlamsal olarak belirlenmesinde ve metinler arasındaki ilişkilerin anlaşılmasında çok başarılıdır.
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/literatür.png" alt="alt text" width="720" height="280">
 
 
 
-#### Adım 6 Bert modelini seçtikten sonra hangi BERT'in kullanılacağına karar verilmiştir
+### Adım 6 Bert modelini seçtikten sonra hangi BERT'in kullanılacağına karar verilmiştir
 
 Bu adımda 4 Bert modeli kullanılmıştır;
 ##### BERT-Cased-With-Stopword
