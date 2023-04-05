@@ -1,7 +1,9 @@
+# GAT0R - Türkçe Doğal Dil İşleme Ekibi
+---
 
 <img  src="https://github.com/thealper2/gat0r-nlp/blob/main/flask/logo.jpg" alt="alt text" width="320" height="280">
 
-Bu çalışma, Teknofest 2023 Türkçe Doğal Dil İşleme yarışması kategorisinde "Aşağılayıcı Dil Tespiti" için geliştirilmiş. 
+*Bu çalışma, Teknofest 2023 Türkçe Doğal Dil İşleme yarışması kategorisinde "Aşağılayıcı Dil Tespiti" için geliştirilmiş. *
 ### AMAÇ 
 
 Türkçe Doğal Dil İşleme ile özellikle Türkçe metinlerin işlenmesi için gerekli kullanıcı dostu ve yüksek performanslı kütüphanelerin, veri kümelerinin hazırlanmasına katkı sağlamak amaçlanmaktadır. Aşağılayıcı Söylemlerin Doğal Dil İşleme İle Tespiti sağlanacaktır. 
@@ -23,7 +25,7 @@ Türkçe Doğal Dil İşleme ile özellikle Türkçe metinlerin işlenmesi için
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img2.png" alt="alt text" width="620" height="280" >
 
-### Adım 2 veri seti temizlenmiştir
+### Veri Ön İşleme
 
 ```python
 def preprocess_text(text):
@@ -66,27 +68,23 @@ df = df.drop(['id', 'text', 'target'], axis=1)
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img0.png" alt="alt text" width="420" height="280">
 
-### Adım 5 model seçimi yapılmıştır. 
+### Literatür 
 Bert (Bidirectional Encoder Representations from Transformers) modeli, doğal dil işlemede son derece başarılı bir modeldir ve birçok farklı NLP görevinde kullanılabilir.Bert modelini tercih etmeden önce Google Schloar'dan makaleler incelenerek literatür taraması yapılmıştır proje için en uygun model BERT olduğuna karar verilmiştir. Bu model, özellikle kelime anlamının bağlamsal olarak belirlenmesinde ve metinler arasındaki ilişkilerin anlaşılmasında çok başarılıdır.
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/literatür.png" alt="alt text" width="520" height="280">
 
 
 
-### Adım 6 Bert modelini seçtikten sonra hangi BERT'in kullanılacağına karar verilmiştir
+### Modeller
 
-Bu adımda 4 Bert modeli kullanılmıştır;
-##### BERT-Cased-With-Stopword
-##### BERT-Cased-Without-Stopword
-##### BERT-Uncased-With-Stopword
-##### BERT-Uncased-Without-Stopword
+Proje gelişimi boyunca, BERTurk'ün *cased* ve *uncased* versiyonları kullanılmıştır. Bu versiyonların üzerinde etkisiz sözcüklerin etkileri ortaya çıkmıştır.
 
 
-|#  |Accuracy| f1-score | Time|
+|# | f1-score | Time|
 |---------|---------|-------|------|
-|Bert-Cased-With-Stopword| | %89 |29:36 dk|
-|Bert-Cased-Without-Stopword| | %91|29:15 dk|
-|Bert-Uncased-Without-Stopword| | %92|28:63 dk|
-|Bert-Uncased-With-Stopword| | %91| 28:64 dk|
+|Bert-Cased-With-Stopword| %89 |29:36 dk|
+|Bert-Cased-Without-Stopword| %91|29:15 dk|
+|Bert-Uncased-Without-Stopword| %92|28:63 dk|
+|Bert-Uncased-With-Stopword| %91| 28:64 dk|
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/confmatrix.png" alt="alt text" width="520" height="280">
