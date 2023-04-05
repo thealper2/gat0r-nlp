@@ -7,7 +7,7 @@
 ### :crocodile: Amaç
 ---
 
-Türkçe Doğal Dil İşleme ile özellikle Türkçe metinlerin işlenmesi için gerekli kullanıcı dostu ve yüksek performanslı kütüphanelerin, veri kümelerinin hazırlanmasına katkı sağlamak amaçlanmaktadır. Aşağılayıcı Söylemlerin Doğal Dil İşleme İle Tespiti sağlanacaktır. 
+Türkçe Doğal Dil İşleme ile özellikle Türkçe metinlerin işlenmesi için gerekli kullanıcı dostu ve yüksek performanslı kütüphanelerin, veri kümelerinin hazırlanmasına katkı sağlamak amaçlanmaktadır. Aşağılayıcı söylemlerin doğal dil işleme ile tespiti sağlanacaktır. Tespit edilen söylemler; SEXIST, INSULT, PROFANITY, RACIST ve OTHER olarak sınıflandırılacaktır. 
 
 
 ### :crocodile: Veri setini inceleyelim.
