@@ -65,7 +65,8 @@ df = df.drop(['id', 'text', 'target'], axis=1)
 
 #### Adım 5 model seçimi yapılmıştır. 
 Bert (Bidirectional Encoder Representations from Transformers) modeli, doğal dil işlemede son derece başarılı bir modeldir ve birçok farklı NLP görevinde kullanılabilir.Bert modelini tercih etmeden önce Google Schloar'dan makaleler incelenerek literatür taraması yapılmıştır proje için en uygun model BERT olduğuna karar verilmiştir. Bu model, özellikle kelime anlamının bağlamsal olarak belirlenmesinde ve metinler arasındaki ilişkilerin anlaşılmasında çok başarılıdır.
-* Görsel eklenecek
+
+<img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/literatür.png" alt="alt text" width="720" height="280">
 
 
 
