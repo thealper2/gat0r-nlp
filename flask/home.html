@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAT0R SEARCH</title>
+    <link rel="stylesheet" href="/static/stylesheets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="center-container">
+        <div class="logo-container">
+            <img src="/static/./banner.png" alt="Logo" width="250" style="margin-top: 350px;">
+        </div>
+
+        <div class="searchbar-container">
+            <form method="POST", action="/predict" style="width: 700px;">
+                <input type="text", name='data', placeholder="Cumle giriniz.">
+            </form>
+        </div>
+
+        <div class="buttons-container">
+            <input type="submit" value="Sınıflandır">
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-links ">
+            <div>
+                <a href="https://github.com/thealper2/gat0r-nlp">Github</a>
+            </div>
+            <div>
+                <img src="/static/./logo.jpg" alt="logo" width="20">
+                <a href="https://github.com/thealper2/gat0r-nlp ">GAT0R</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
