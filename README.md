@@ -4,10 +4,10 @@
 <img  src="https://github.com/thealper2/gat0r-nlp/blob/main/flask/logo.jpg" alt="alt text" width="320" height="280">
 
 *Bu çalışma, Teknofest 2023 Türkçe Doğal Dil İşleme yarışması kategorisinde "Aşağılayıcı Dil Tespiti" için geliştirilmiş. *
-### AMAÇ 
+### Amaç
 
 Türkçe Doğal Dil İşleme ile özellikle Türkçe metinlerin işlenmesi için gerekli kullanıcı dostu ve yüksek performanslı kütüphanelerin, veri kümelerinin hazırlanmasına katkı sağlamak amaçlanmaktadır. Aşağılayıcı Söylemlerin Doğal Dil İşleme İle Tespiti sağlanacaktır. 
-### Adım 1 Veri setini inceleyelim
+### Veri setini inceleyelim.
 
 | # |  Column   |Non-Null| Count|  Dtype |
 |---|  ------ |  --------|------ | -----  |
@@ -51,7 +51,8 @@ def preprocess_text(text):
     return text
 ```
 
-### Adım 3 Veri setini temizledikten sonra ön işleme adımlarından olan tokenize,mapping ve encoder dönüşümünü yapılmıştır.
+* Veri setini temizledikten sonra ön işleme adımlarından olan tokenize,mapping ve encoder dönüşümünü yapılmıştır.
+
 ```python
 from sklearn.preprocessing import LabelEncoder
 # LabelEncoder kullanarak "target" sütunumuza dönüşüm yaptırdık.
@@ -68,7 +69,9 @@ df = df.drop(['id', 'text', 'target'], axis=1)
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img0.png" alt="alt text" width="420" height="280">
 
-### Literatür 
+### Literatür
+---
+
 Bert (Bidirectional Encoder Representations from Transformers) modeli, doğal dil işlemede son derece başarılı bir modeldir ve birçok farklı NLP görevinde kullanılabilir.Bert modelini tercih etmeden önce Google Schloar'dan makaleler incelenerek literatür taraması yapılmıştır proje için en uygun model BERT olduğuna karar verilmiştir. Bu model, özellikle kelime anlamının bağlamsal olarak belirlenmesinde ve metinler arasındaki ilişkilerin anlaşılmasında çok başarılıdır.
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/literatür.png" alt="alt text" width="520" height="280">
@@ -76,15 +79,40 @@ Bert (Bidirectional Encoder Representations from Transformers) modeli, doğal di
 
 
 ### Modeller
+---
 
 Proje gelişimi boyunca, BERTurk'ün *cased* ve *uncased* versiyonları kullanılmıştır. Bu versiyonların üzerinde etkisiz sözcüklerin etkileri ortaya çıkmıştır.
 
 
-|# | f1-score | Time|
-|---------|---------|-------|------|
-|Bert-Cased-With-Stopword| %89 |29:36 dk|
-|Bert-Cased-Without-Stopword| %91|29:15 dk|
-|Bert-Uncased-Without-Stopword| %92|28:63 dk|
-|Bert-Uncased-With-Stopword| %91| 28:64 dk|
+|# | F1-score | Time |
+|------------|-------|------|
+|BERT-cased-with-stopwords| %89 |29:36 dk|
+|BERT-cased-sithout-stopwords| %91|29:15 dk|
+|BERT-uncased-sithout-stopwords| %92|28:63 dk|
+|BERT-uncased-sith-stopwords| %91| 28:64 dk|
+
+* Projenin canlıya alınmasında **BERT-uncased-with-stopwords** modeli kullanılmıştır.
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/confmatrix.png" alt="alt text" width="520" height="280">
+
+### GAT0R SEARCH
+---
+
+Flask kullanarak girilen metnin sınıflandırmasını yapan bir uygulama geliştirdik.
+
+<img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/flask-resim.png?raw=true" alt="flask uygulamasi">
+
+### HuggingFace Spaces
+---
+
+Modelimizin Gradio servisine aşağıdaki linkden ulaşabilirsiniz.
+[Gradio](https://huggingface.co/spaces/thealper2/gat0r-gradio)
+
+<img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/huggingface-gradio.png?raw=true" alt="gradio">
+
+
+### Kaynakça
+---
+
+[Text Classification with BERT in PyTorch](https://towardsdatascience.com/text-classification-with-bert-in-pytorch-887965e5820f)
+
