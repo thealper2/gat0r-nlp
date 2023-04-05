@@ -89,10 +89,10 @@ Proje gelişimi boyunca, BERTurk'ün *cased* ve *uncased* versiyonları kullanı
 
 * Projenin canlıya alınmasında **BERT-uncased-with-stopwords** modeli kullanılmıştır. Modellerin kodlarına gitmek için aşağıdaki linklere tıklayın.
 
-[BERT-cased-with-stopwords](https://github.com/thealper2/gat0r-nlp/blob/main/models/BERT_cased_with_stopwords.ipynb)
-[BERT-cased-without-stopwords](https://github.com/thealper2/gat0r-nlp/blob/main/models/BERT_cased_without_stopwords.ipynb)
-[BERT-uncased-without-stopwords](https://github.com/thealper2/gat0r-nlp/blob/main/models/BERT_uncased_without_stopwords.ipynb)
-[BERT-uncased-with-stopwords](https://github.com/thealper2/gat0r-nlp/blob/main/models/BERT_uncased_with_stopwords.ipynb)
+1. [BERT-cased-with-stopwords](https://github.com/thealper2/gat0r-nlp/blob/main/models/BERT_cased_with_stopwords.ipynb)
+2. [BERT-cased-without-stopwords](https://github.com/thealper2/gat0r-nlp/blob/main/models/BERT_cased_without_stopwords.ipynb)
+3. [BERT-uncased-without-stopwords](https://github.com/thealper2/gat0r-nlp/blob/main/models/BERT_uncased_without_stopwords.ipynb)
+4. [BERT-uncased-with-stopwords](https://github.com/thealper2/gat0r-nlp/blob/main/models/BERT_uncased_with_stopwords.ipynb)
 
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/confmatrix.png" alt="alt text" width="520" height="280">
@@ -107,8 +107,8 @@ Flask kullanarak girilen metnin sınıflandırmasını yapan bir uygulama geliş
 ### :crocodile: HuggingFace Spaces
 ---
 
-Modelimizin Gradio servisine aşağıdaki linkden ulaşabilirsiniz.
-[Gradio](https://huggingface.co/spaces/thealper2/gat0r-gradio)
+Modelimizin Gradio servisine aşağıdaki linkden ulaşabilirsiniz.<br/>
+[Gradio](https://huggingface.co/spaces/thealper2/gat0r-gradio)<br/>
 [Kaynak Kodu](https://github.com/thealper2/gat0r-nlp/blob/main/NLPEvaluation_GAT0R.py)
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/huggingface-gradio.png?raw=true" alt="gradio">
