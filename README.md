@@ -11,7 +11,11 @@ Türkçe Doğal Dil İşleme ile özellikle Türkçe metinlerin işlenmesi için
 |2  | is_offensive|12617 |non-null |int64 |
 |3  | target  |12617 |non-null |object|
 
-* NOT eklenecek
+ Veri Setimizde 12617 adet veri bulunmaktadır.
+ 
+<img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img1.png" alt="alt text" width="320" height="280">
+%28.7 si Other sınıfının içerisindeyken %71.3'ü Irkçı, cinsiyetçi, Sexist,Küfür içerir.
+<img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img2.png" alt="alt text" width="620" height="280">
 
 #### Adım 2 Veri Setini Temizleden Önce En sık kullanılan keimeleri tespit edilmiştir
 
