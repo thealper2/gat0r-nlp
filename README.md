@@ -109,6 +109,7 @@ Flask kullanarak girilen metnin sınıflandırmasını yapan bir uygulama geliş
 
 Modelimizin Gradio servisine aşağıdaki linkden ulaşabilirsiniz.
 [Gradio](https://huggingface.co/spaces/thealper2/gat0r-gradio)
+[Kaynak Kodu](https://github.com/thealper2/gat0r-nlp/blob/main/NLPEvaluation_GAT0R.py)
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/huggingface-gradio.png?raw=true" alt="gradio">
 
