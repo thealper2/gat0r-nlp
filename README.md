@@ -1,5 +1,5 @@
 
-<img src="https://github.com/thealper2/gat0r-nlp/blob/main/flask/logo.jpg" alt="alt text" width="320" height="280">
+<img  src="https://github.com/thealper2/gat0r-nlp/blob/main/flask/logo.jpg" alt="alt text" width="320" height="280">
 
 Bu çalışma, Teknofest 2023 Türkçe Doğal Dil İşleme yarışması kategorisinde "Aşağılayıcı Dil Tespiti" için geliştirilmiş. 
 ### AMAÇ 
@@ -19,13 +19,13 @@ Türkçe Doğal Dil İşleme ile özellikle Türkçe metinlerin işlenmesi için
  
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img1.png" alt="alt text" width="320" height="280">
 
-%28.7 si Other sınıfının içerisindeyken %71.3'ü Irkçı, cinsiyetçi, Sexist,Küfür sınıfının içerisindedir.
+%28.7 si Other sınıfının içerisindeyken %71.3'ü Irkçı, Cinsiyetçi, Sexist,Küfür sınıfının içerisindedir.
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img2.png" alt="alt text" width="620" height="280" >
 
 ### Adım 2 veri seti temizlenmiştir
 
-```
+```python
 def preprocess_text(text):
     # Küçük harflere çevirme
     text = text.lower()
@@ -50,7 +50,7 @@ def preprocess_text(text):
 ```
 
 ### Adım 3 Veri setini temizledikten sonra ön işleme adımlarından olan tokenize,mapping ve encoder dönüşümünü yapılmıştır.
-```
+```python
 from sklearn.preprocessing import LabelEncoder
 # LabelEncoder kullanarak "target" sütunumuza dönüşüm yaptırdık.
 le = LabelEncoder().fit(df["target"])
@@ -69,7 +69,7 @@ df = df.drop(['id', 'text', 'target'], axis=1)
 ### Adım 5 model seçimi yapılmıştır. 
 Bert (Bidirectional Encoder Representations from Transformers) modeli, doğal dil işlemede son derece başarılı bir modeldir ve birçok farklı NLP görevinde kullanılabilir.Bert modelini tercih etmeden önce Google Schloar'dan makaleler incelenerek literatür taraması yapılmıştır proje için en uygun model BERT olduğuna karar verilmiştir. Bu model, özellikle kelime anlamının bağlamsal olarak belirlenmesinde ve metinler arasındaki ilişkilerin anlaşılmasında çok başarılıdır.
 
-<img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/literatür.png" alt="alt text" width="720" height="280">
+<img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/literatür.png" alt="alt text" width="520" height="280">
 
 
 
