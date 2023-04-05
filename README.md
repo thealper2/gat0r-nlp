@@ -85,3 +85,5 @@ Bu adımda 4 Bert modeli kullanılmıştır;
 |Bert-Cased-Without-Stopword| | %91|29:15 dk|
 |Bert-Uncased-Without-Stopword| | %92|28:63 dk|
 |Bert-Uncased-With-Stopword| | %91| 28:64 dk|
+
+<img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/confmatrix.png" alt="alt text" width="520" height="280">
