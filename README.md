@@ -1,17 +1,19 @@
-# GAT0R - Türkçe Doğal Dil İşleme Ekibi
+# :crocodile: GAT0R - Türkçe Doğal Dil İşleme Ekibi
 ---
 
 <img  src="https://github.com/thealper2/gat0r-nlp/blob/main/flask/logo.jpg" alt="alt text" width="320" height="280">
 
 *Bu çalışma, Teknofest 2023 Türkçe Doğal Dil İşleme yarışması kategorisinde "Aşağılayıcı Dil Tespiti" için geliştirilmiştir.*
-### Amaç
+### :crocodile: Amaç
 ---
 
 Türkçe Doğal Dil İşleme ile özellikle Türkçe metinlerin işlenmesi için gerekli kullanıcı dostu ve yüksek performanslı kütüphanelerin, veri kümelerinin hazırlanmasına katkı sağlamak amaçlanmaktadır. Aşağılayıcı Söylemlerin Doğal Dil İşleme İle Tespiti sağlanacaktır. 
 
 
-### Veri setini inceleyelim.
+### :crocodile: Veri setini inceleyelim.
 ---
+
+* Veri Setimizde 2081'i **SEXIST**, 2033'ü **RACIST**, 2376'sı **PROFANITY**, 2393'ü **INSULT**, 3584'ü **OTHER** kategorisinde olmak üzere12617 adet veri bulunmaktadır. 
 
 | # |  Column   |Non-Null| Count|  Dtype |
 |---|  ------ |  --------|------ | -----  |
@@ -19,17 +21,14 @@ Türkçe Doğal Dil İşleme ile özellikle Türkçe metinlerin işlenmesi için
 | 1 | text     |12617 |non-null   |object |
 |2  | is_offensive|12617 |non-null |int64 |
 |3  | target  |12617 |non-null |object|
-
- Veri Setimizde 12617 adet veri bulunmaktadır.
-
  
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img1.png" alt="alt text" width="320" height="280">
 
-%28.7 si Other sınıfının içerisindeyken %71.3'ü Irkçı, Cinsiyetçi, Sexist,Küfür sınıfının içerisindedir.
+* %28.7 si Other sınıfının içerisindeyken %71.3'ü Irkçı, Cinsiyetçi, Sexist,Küfür sınıfının içerisindedir.
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img2.png" alt="alt text" width="620" height="280" >
 
-### Veri Ön İşleme
+### :crocodile: Veri Ön İşleme
 ---
 Aşağıdaki python kodu ile verisetimize ön işleme adımları uyguluyoruz.
 
@@ -75,7 +74,7 @@ df = df.drop(['id', 'text', 'target'], axis=1)
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img0.png" alt="alt text" width="420" height="280">
 
-### Modeller
+### :crocodile: Modeller
 ---
 
 Proje gelişimi boyunca, BERTurk'ün *cased* ve *uncased* versiyonları kullanılmıştır. Bu versiyonların üzerinde etkisiz sözcüklerin etkileri ortaya çıkmıştır.
@@ -98,14 +97,14 @@ Proje gelişimi boyunca, BERTurk'ün *cased* ve *uncased* versiyonları kullanı
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/confmatrix.png" alt="alt text" width="520" height="280">
 
-### GAT0R SEARCH
+### :crocodile: GAT0R SEARCH
 ---
 
 Flask kullanarak girilen metnin sınıflandırmasını yapan bir uygulama geliştirdik.
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/flask-resim.png?raw=true" alt="flask uygulamasi">
 
-### HuggingFace Spaces
+### :crocodile: HuggingFace Spaces
 ---
 
 Modelimizin Gradio servisine aşağıdaki linkden ulaşabilirsiniz.
@@ -114,7 +113,7 @@ Modelimizin Gradio servisine aşağıdaki linkden ulaşabilirsiniz.
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/huggingface-gradio.png?raw=true" alt="gradio">
 
 
-### Kaynakça
+### :crocodile: Kaynaklar
 ---
 
 [Text Classification with BERT in PyTorch](https://towardsdatascience.com/text-classification-with-bert-in-pytorch-887965e5820f)
