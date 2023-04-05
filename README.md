@@ -3,11 +3,15 @@
 
 <img  src="https://github.com/thealper2/gat0r-nlp/blob/main/flask/logo.jpg" alt="alt text" width="320" height="280">
 
-*Bu çalışma, Teknofest 2023 Türkçe Doğal Dil İşleme yarışması kategorisinde "Aşağılayıcı Dil Tespiti" için geliştirilmiş. *
+*Bu çalışma, Teknofest 2023 Türkçe Doğal Dil İşleme yarışması kategorisinde "Aşağılayıcı Dil Tespiti" için geliştirilmiştir.*
 ### Amaç
+---
 
 Türkçe Doğal Dil İşleme ile özellikle Türkçe metinlerin işlenmesi için gerekli kullanıcı dostu ve yüksek performanslı kütüphanelerin, veri kümelerinin hazırlanmasına katkı sağlamak amaçlanmaktadır. Aşağılayıcı Söylemlerin Doğal Dil İşleme İle Tespiti sağlanacaktır. 
+
+
 ### Veri setini inceleyelim.
+---
 
 | # |  Column   |Non-Null| Count|  Dtype |
 |---|  ------ |  --------|------ | -----  |
@@ -26,6 +30,8 @@ Türkçe Doğal Dil İşleme ile özellikle Türkçe metinlerin işlenmesi için
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img2.png" alt="alt text" width="620" height="280" >
 
 ### Veri Ön İşleme
+---
+Aşağıdaki python kodu ile verisetimize ön işleme adımları uyguluyoruz.
 
 ```python
 def preprocess_text(text):
@@ -65,7 +71,7 @@ df["labels"] = df["target"].apply(lambda x: le_nm[x])
 df = df.drop(['id', 'text', 'target'], axis=1)
 !pip install transformers
 ```
-### Adım 4 "Name Mapping" işleminden sonra veri setimizin ilk 5 elemanı inceleyelim.
+* "Name Mapping" işleminden sonra veri setimizin ilk 5 elemanı inceleyelim.
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img0.png" alt="alt text" width="420" height="280">
 
@@ -76,8 +82,6 @@ Bert (Bidirectional Encoder Representations from Transformers) modeli, doğal di
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/literatür.png" alt="alt text" width="520" height="280">
 
-
-
 ### Modeller
 ---
 
@@ -87,11 +91,17 @@ Proje gelişimi boyunca, BERTurk'ün *cased* ve *uncased* versiyonları kullanı
 |# | F1-score | Time |
 |------------|-------|------|
 |BERT-cased-with-stopwords| %89 |29:36 dk|
-|BERT-cased-sithout-stopwords| %91|29:15 dk|
-|BERT-uncased-sithout-stopwords| %92|28:63 dk|
-|BERT-uncased-sith-stopwords| %91| 28:64 dk|
+|BERT-cased-without-stopwords| %91|29:15 dk|
+|BERT-uncased-without-stopwords| %92|28:63 dk|
+|BERT-uncased-with-stopwords| %91| 28:64 dk|
 
-* Projenin canlıya alınmasında **BERT-uncased-with-stopwords** modeli kullanılmıştır.
+* Projenin canlıya alınmasında **BERT-uncased-with-stopwords** modeli kullanılmıştır. Modellerin kodlarına gitmek için aşağıdaki linklere tıklayın.
+
+[BERT-cased-with-stopwords](https://github.com/thealper2/gat0r-nlp/blob/main/models/BERT_cased_with_stopwords.ipynb)
+[BERT-cased-without-stopwords](https://github.com/thealper2/gat0r-nlp/blob/main/models/BERT_cased_without_stopwords.ipynb)
+[BERT-uncased-without-stopwords](https://github.com/thealper2/gat0r-nlp/blob/main/models/BERT_uncased_without_stopwords.ipynb)
+[BERT-uncased-with-stopwords](https://github.com/thealper2/gat0r-nlp/blob/main/models/BERT_uncased_with_stopwords.ipynb)
+
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/confmatrix.png" alt="alt text" width="520" height="280">
 
