@@ -258,19 +258,23 @@ Proje gelişimi boyunca, BERTurk'ün *cased* ve *uncased* versiyonları kullanı
 ### :crocodile: GAT0R SEARCH
 ---
 
-Flask kullanarak girilen metnin sınıflandırmasını yapan bir uygulama geliştirdik.
+Flask kullanarak girilen metnin sınıflandırmasını yapan bir uygulama geliştirdik. [Buradan](https://github.com/thealper2/gat0r-nlp/blob/main/images/flask-video.mp4) demo videomuzu izleyebilirsiniz.
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/flask-resim.png?raw=true" alt="flask uygulamasi">
+
 
 ### :crocodile: HuggingFace Spaces
 ---
 
-Modelimizin Gradio servisine aşağıdaki linkden ulaşabilirsiniz.<br/>
+* Modelimizin Gradio servisine aşağıdaki linkten ulaşabilirsiniz.<br/>
 [Gradio](https://huggingface.co/spaces/thealper2/gat0r-gradio)<br/>
 [Kaynak Kodu](https://github.com/thealper2/gat0r-nlp/blob/main/NLPEvaluation_GAT0R.py)
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/huggingface-gradio.png?raw=true" alt="gradio">
 
+* Modelimizin Streamlit servisine aşağıdaki linkten ulaşabilirsiniz.<br/>
+
+<img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/streamlit.png?raw=true" alt="streamlit">
 
 ### :crocodile: Kaynaklar
 ---
