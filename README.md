@@ -36,6 +36,25 @@ tqdm==4.65.0
 more-itertools==9.1.0
 ```
 
+### :crocodile: Kodların Çalıştırılması
+
+* Kodları aşağıdaki kodları yazarak çalıştırabilirsiniz.
+
+```python
+# Modeli çalıştırmak için
+python3 bert_uncased-with-stopwords.py
+# Gradio servisini çalıştırmak için
+python3 gradio.py
+# Flask servisini çalıştırmak için
+python3 flask.py
+
+```
+* Gerekli kütüphaneleri kurmak için aşağıdaki kodu çalıştırabilirsiniz.
+
+```python
+pip3 install -r requirements.txt
+```
+
 # Model
 ---
 
