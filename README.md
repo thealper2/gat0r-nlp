@@ -124,3 +124,7 @@ Modelimizin Gradio servisine aşağıdaki linkden ulaşabilirsiniz.<br/>
 
 [Text Classification with BERT in PyTorch](https://towardsdatascience.com/text-classification-with-bert-in-pytorch-887965e5820f)
 
+### :crocodile: Lisans
+
+Lisans dosyasına [buradan](https://github.com/thealper2/gat0r-nlp/blob/main/LICENSE) ulaşabilirsiniz.
+
