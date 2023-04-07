@@ -273,6 +273,7 @@ Flask kullanarak girilen metnin sınıflandırmasını yapan bir uygulama geliş
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/huggingface-gradio.png?raw=true" alt="gradio">
 
 * Modelimizin Streamlit servisine aşağıdaki linkten ulaşabilirsiniz.<br/>
+[Streamlit](https://huggingface.co/spaces/thealper2/gat0r-streamlit)
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/streamlit.png?raw=true" alt="streamlit">
 
