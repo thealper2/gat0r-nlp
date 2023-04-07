@@ -168,6 +168,7 @@ print(len(df_train), len(df_validation), len(df_test))
 * Eğitme ve doğrulama işleminden sonra aşağıdaki skorları elde ediyoruz.
 
 | EPOCHS | Train Loss | Train Accuracy | Validation Loss | Validation Accuracy |
+| ------ | ---------- | -------------- | --------------- | ------------------- |
 | 1 | 0.5284 | 0.6281 | 0.2232 | 0.8763 |
 | 2 | 0.1590 | 0.9103 | 0.1416 | 0.9120 |
 
@@ -178,6 +179,7 @@ print(len(df_train), len(df_validation), len(df_test))
 * Tahmin işleminden sonra aşağıdaki skorları elde ediyoruz.
 
 | # | precision | recall | f1-score | support |
+| - | --------- | ------ | -------- | ------- |
 | 0 | 0.86 | 0.86 | 0.86 | 489 |
 | 1 | 0.94 | 0.91 | 0.93 | 718 |
 | 2 | 0.93 | 0.92 | 0.93 | 477 |
