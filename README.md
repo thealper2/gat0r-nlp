@@ -12,6 +12,12 @@ Türkçe Doğal Dil İşleme ile özellikle Türkçe metinlerin işlenmesi için
 ### :crocodile: Takım Üyeleri
 ---
 
+1. [Alper KARACA](https://github.com/thealper2)
+2. [Ferhat TOSON](https://github.com/ferhattoson)
+3. [Aleyna KOCABEY](https://github.com/Leylaleyn)
+4. [Fatma Begüm ARSLANOĞLU](https://github.com/FatmaBeg)
+
+
 ### :crocodile: Gerekli Kütüphaneler
 ---
 
