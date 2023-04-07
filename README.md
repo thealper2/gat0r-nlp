@@ -37,6 +37,7 @@ more-itertools==9.1.0
 ```
 
 # Model
+---
 
 * Modelimizi oluşturmak için aşağıdaki adımları uygulayacağız.
 
@@ -123,6 +124,7 @@ df = df.drop(['id', 'text', 'target'], axis=1)
 - 4: SEXIST
 
 ### :crocodile: Train, validation ve test sınıfın oluşturulması
+---
 
 * Modelimizi eğitmek için veri setimizin **%60**'ın train, **%20**'sini validation ve **%20**'sini test işlemi için böldük.
 
