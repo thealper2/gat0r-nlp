@@ -71,11 +71,11 @@ def predict(model, sentence):
     
 
     # Kategorik sınıfı döndür.
-    return st.success('KATEGORI: '+ categories.get(output.argmax(dim=1).item()))
+    return st.success('CATEGORY: '+ categories.get(output.argmax(dim=1).item()))
 
-st.title('HATE SPEECH RECOGNITION')
-text = st.text_input("Cumle giriniz...")
-res = st.button('Predict')
+st.title('HATE SPEECH CLASSIFICATION')
+text = st.text_input("...")
+res = st.button('PREDICT')
 
 if res:
     predict(model, text)
