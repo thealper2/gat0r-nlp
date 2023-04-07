@@ -9,6 +9,24 @@
 
 Türkçe Doğal Dil İşleme ile özellikle Türkçe metinlerin işlenmesi için gerekli kullanıcı dostu ve yüksek performanslı kütüphanelerin, veri kümelerinin hazırlanmasına katkı sağlamak amaçlanmaktadır. Aşağılayıcı söylemlerin doğal dil işleme ile tespiti sağlanacaktır. Tespit edilen söylemler; SEXIST, INSULT, PROFANITY, RACIST ve OTHER olarak sınıflandırılacaktır. 
 
+### :crocodile: Takım Üyeleri
+---
+
+### :crocodile: Gerekli Kütüphaneler
+---
+
+```shell
+pandas==2.0
+matplotlib==3.7.1
+nltk==3.8.1
+wordcloud==1.8.2.2
+scikit-learnm==1.2.2
+torch==2.0.0
+transformers==4.27.4
+numpy==1.24.2
+tqdm==4.65.0
+more-itertools==9.1.0
+```
 
 ### :crocodile: Veri setini inceleyelim.
 ---
@@ -59,7 +77,7 @@ def preprocess_text(text):
     return text
 ```
 
-* Veri setini temizledikten sonra ön işleme adımlarından olan tokenize,mapping ve encoder dönüşümünü yapılmıştır.
+* Veri setini temizledikten sonra ön işleme adımlarından olan tokenize, mapping ve encoder dönüşümünü yapılmıştır.
 
 ```python
 from sklearn.preprocessing import LabelEncoder
@@ -80,7 +98,7 @@ df = df.drop(['id', 'text', 'target'], axis=1)
 ### :crocodile: Modeller
 ---
 
-Proje gelişimi boyunca, BERTurk'ün *cased* ve *uncased* versiyonları kullanılmıştır. Bu versiyonların üzerinde etkisiz sözcüklerin etkileri ortaya çıkmıştır.
+Proje gelişimi boyunca, BERTurk'ün *cased* ve *uncased* versiyonları kullanılmıştır. Bu versiyonların üzerinde etkisiz sözcüklerin etkileri ortaya çıkmıştır. Kullanılan modelin HuggingFace sayfasına [buradan](https://huggingface.co/dbmdz/bert-base-turkish-uncased) ulaşabilirsiniz.
 
 
 |# | F1-score | Time |
@@ -92,13 +110,15 @@ Proje gelişimi boyunca, BERTurk'ün *cased* ve *uncased* versiyonları kullanı
 
 * Projenin canlıya alınmasında **BERT-uncased-with-stopwords** modeli kullanılmıştır. Modellerin kodlarına gitmek için aşağıdaki linklere tıklayın.
 
-1. [BERT-cased-with-stopwords](https://github.com/thealper2/gat0r-nlp/blob/main/models/BERT_cased_with_stopwords.ipynb)
-2. [BERT-cased-without-stopwords](https://github.com/thealper2/gat0r-nlp/blob/main/models/BERT_cased_without_stopwords.ipynb)
-3. [BERT-uncased-without-stopwords](https://github.com/thealper2/gat0r-nlp/blob/main/models/BERT_uncased_without_stopwords.ipynb)
-4. [BERT-uncased-with-stopwords](https://github.com/thealper2/gat0r-nlp/blob/main/models/BERT_uncased_with_stopwords.ipynb)
+| # | Python | Jupyter Notebook |
+|---|--------|------------------|
+| BERT-cased-with-stopwords | [Link](https://github.com/thealper2/gat0r-nlp/blob/main/models/bert_cased_with_stopwords.py) | [Link](https://github.com/thealper2/gat0r-nlp/blob/main/models/BERT_cased_with_stopwords.ipynb) |
+| BERT-cased-without-stopwords | [Link](https://github.com/thealper2/gat0r-nlp/blob/main/models/bert_cased_without_stopwords.py) | [Link](https://github.com/thealper2/gat0r-nlp/blob/main/models/BERT_cased_without_stopwords.ipynb) |
+| BERT-uncased-with-stopwords | [Link](https://github.com/thealper2/gat0r-nlp/blob/main/models/bert_uncased_with_stopwords.py) | [Link](https://github.com/thealper2/gat0r-nlp/blob/main/models/BERT_uncased_with_stopwords.ipynb) |
+| BERT-uncased-without-stopwords | [Link](https://github.com/thealper2/gat0r-nlp/blob/main/models/bert_uncased_without_stopwords.py) | [Link](https://github.com/thealper2/gat0r-nlp/blob/main/models/BERT_uncased_without_stopwords.ipynb)) |
 
 * Kaydedilmiş modellere ulaşmak için aşağıdaki linki kullanabilirsiniz.
-[Modeller](https://drive.google.com/drive/folders/1Wni5jOcrAp7GTONO5Sx079JFlXfYWQPQ?usp=sharing)
+[Modeller (Drive)](https://drive.google.com/drive/folders/1Wni5jOcrAp7GTONO5Sx079JFlXfYWQPQ?usp=sharing)
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/confmatrix.png" alt="alt text" width="520" height="280">
 
@@ -125,6 +145,7 @@ Modelimizin Gradio servisine aşağıdaki linkden ulaşabilirsiniz.<br/>
 [Text Classification with BERT in PyTorch](https://towardsdatascience.com/text-classification-with-bert-in-pytorch-887965e5820f)
 
 ### :crocodile: Lisans
+---
 
 Lisans dosyasına [buradan](https://github.com/thealper2/gat0r-nlp/blob/main/LICENSE) ulaşabilirsiniz.
 
