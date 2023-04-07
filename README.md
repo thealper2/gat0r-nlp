@@ -28,6 +28,9 @@ Türkçe Doğal Dil İşleme ile özellikle Türkçe metinlerin işlenmesi için
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img2.png" alt="alt text" width="620" height="280" >
 
+* Veri setine aşağıdaki linkden ulaşabilirsiniz.
+[Veri Seti](https://raw.githubusercontent.com/thealper2/gat0r-nlp/main/datasets/teknofest_train.csv)
+
 ### :crocodile: Veri Ön İşleme
 ---
 Aşağıdaki python kodu ile verisetimize ön işleme adımları uyguluyoruz.
