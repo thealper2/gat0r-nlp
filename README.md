@@ -56,7 +56,7 @@ python3 flask.py
 pip3 install -r requirements.txt
 ```
 
-# Model
+# :crocodile: Model
 ---
 
 * Modelimizi oluşturmak için aşağıdaki adımları uygulayacağız.
@@ -274,6 +274,7 @@ Flask kullanarak girilen metnin sınıflandırmasını yapan bir uygulama geliş
 
 * Modelimizin Streamlit servisine aşağıdaki linkten ulaşabilirsiniz.<br/>
 [Streamlit](https://huggingface.co/spaces/thealper2/gat0r-streamlit)
+[Kaynak Kodu](https://github.com/thealper2/gat0r-nlp/blob/main/streamlit/app.py)
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/streamlit.png?raw=true" alt="streamlit">
 
