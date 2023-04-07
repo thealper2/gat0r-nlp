@@ -21,6 +21,8 @@ Türkçe Doğal Dil İşleme ile özellikle Türkçe metinlerin işlenmesi için
 ### :crocodile: Gerekli Kütüphaneler
 ---
 
+* Çalışmalarımızın hepsi [Google Colab](https://colab.research.google.com/) ortamında yapılmıştır.
+
 ```shell
 pandas==2.0
 matplotlib==3.7.1
@@ -33,6 +35,18 @@ numpy==1.24.2
 tqdm==4.65.0
 more-itertools==9.1.0
 ```
+
+# Model
+
+* Modelimizi oluşturmak için aşağıdaki adımları uygulayacağız.
+
+1. Veri setinin yüklenmesi ve incelenmesi
+2. Veri ön işleme adımlarının uygulanması
+3. Train, validation ve test veri sınıflarının oluşturulması ve model sınıfının oluşturulması
+4. Model eğitme işlemi
+5. Model doğrulama işlemi
+6. Tahmin işleminin yapılması
+7. Modelin kaydedilmesi
 
 ### :crocodile: Veri setini inceleyelim.
 ---
@@ -99,7 +113,100 @@ df = df.drop(['id', 'text', 'target'], axis=1)
 ```
 * "Name Mapping" işleminden sonra veri setimizin ilk 5 elemanı inceleyelim.
 
-<img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img0.png" alt="alt text" width="420" height="280">
+<img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img0.png">
+
+* LabelEncoder işleminden sonra her bir kategoriyi temsil eden sayılar;
+- 0: INSULT
+- 1: OTHER
+- 2: PROFANITY
+- 3: RACIST
+- 4: SEXIST
+
+### :crocodile: Train, validation ve test sınıfın oluşturulması
+
+* Modelimizi eğitmek için veri setimizin **%60**'ın train, **%20**'sini validation ve **%20**'sini test işlemi için böldük.
+
+```python
+def train_validate_test_split(df):
+    # Rastgelelik durumu.
+    np.random.seed(4242)
+    # Diziyi rastgele permute eder.
+    perm = np.random.permutation(df.index)
+    # Veri setinin %60'ının sayısal değeri hesaplandı.
+    train_end = int(.6 * len(df.index))
+    # Veri setinin %20'sinin sayısal değeri hesaplandı.
+    validate_end = int(.2 * len(df.index)) + train_end
+    # Veri setinin %60'ını train etmek için ayırdık.
+    train = df.iloc[perm[:train_end]]
+    # Veri setinin %20'sini validation etmek için ayırdık.
+    validate = df.iloc[perm[train_end:validate_end]]
+    # Veri setinin %20'sini test etmek için ayırdık.
+    test = df.iloc[perm[validate_end:]]
+    # train, validation, test veri setlerini döndür.
+    return train, validate, test
+
+# Train, Validation ve Test için veri setlerimiz oluşturduk.
+df_train, df_validation, df_test = train_validate_test_split(df)
+# Train, Validation ve Test için oluşturduğumuz veri setlerinin uzunluğunu ekrana yazdırdık. (%60 - %20 - %20)
+print(len(df_train), len(df_validation), len(df_test))
+```
+
+### :crocodile: Model sınıfını oluşturmak
+---
+
+* BertClassifier'imizi oluşturmak için, 1 Bert, 1 Dropout, 1 Linear, 1 ReLU katmanı kullanıyoruz.
+
+
+### :crocodile: Modeli eğitmek ve doğrulamak
+---
+
+* Modelimizi eğitmek için aşağıdaki parametreleri kullanıyoruz.
+- EPOCHS = 2
+- LEARNING RATE = 1e-6
+- BATCH SIZE=2
+
+* Eğitme ve doğrulama işleminden sonra aşağıdaki skorları elde ediyoruz.
+
+| EPOCHS | Train Loss | Train Accuracy | Validation Loss | Validation Accuracy |
+| 1 | 0.5284 | 0.6281 | 0.2232 | 0.8763 |
+| 2 | 0.1590 | 0.9103 | 0.1416 | 0.9120 |
+
+
+### :crocodile: Tahmin
+---
+
+* Tahmin işleminden sonra aşağıdaki skorları elde ediyoruz.
+
+| # | precision | recall | f1-score | support |
+| 0 | 0.86 | 0.86 | 0.86 | 489 |
+| 1 | 0.94 | 0.91 | 0.93 | 718 |
+| 2 | 0.93 | 0.92 | 0.93 | 477 |
+| 3 | 0.89 | 0.94 | 0.92 | 399 | 
+| 4 | 0.92 | 0.94 | 0.93 | 441 |
+| accuracy | x | x | 0.91 | 2524 |
+| macro avg | 0.91 | 0.91 | 0.91 | 2524 |
+| weighted avg | 0.91 | 0.91 | 0.91 | 2524 |
+
+* Modelimizin tahmin işleminden sonra oluşan sonucu görebilmek için **plot_confusion_matrix** fonksiyonumuzu kullanıyoruz.
+
+<img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/confmatrix.png" alt="confusion matrix">
+
+### :crocodile: Modeli Kaydedelim
+---
+
+* Oluşan modelimizi "pt" uzantısı ile **pytorch** modeli halinde Google Drive'ımıza kaydediyoruz.
+
+```python
+from google.colab import drive
+drive.mount('/content/gdrive')
+
+# Modelimize isim vererek Drive'a kaydettik.
+model_name = "bert_uncased-with-stopwords.pt"
+path = F"/content/gdrive/My Drive/{model_name}"
+
+torch.save(model.state_dict(), path)
+```
+
 
 ### :crocodile: Modeller
 ---
@@ -125,8 +232,6 @@ Proje gelişimi boyunca, BERTurk'ün *cased* ve *uncased* versiyonları kullanı
 
 * Kaydedilmiş modellere ulaşmak için aşağıdaki linki kullanabilirsiniz.
 [Modeller (Drive)](https://drive.google.com/drive/folders/1Wni5jOcrAp7GTONO5Sx079JFlXfYWQPQ?usp=sharing)
-
-<img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/confmatrix.png" alt="alt text" width="520" height="280">
 
 ### :crocodile: GAT0R SEARCH
 ---
