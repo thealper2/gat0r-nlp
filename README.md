@@ -94,6 +94,8 @@ Proje gelişimi boyunca, BERTurk'ün *cased* ve *uncased* versiyonları kullanı
 3. [BERT-uncased-without-stopwords](https://github.com/thealper2/gat0r-nlp/blob/main/models/BERT_uncased_without_stopwords.ipynb)
 4. [BERT-uncased-with-stopwords](https://github.com/thealper2/gat0r-nlp/blob/main/models/BERT_uncased_with_stopwords.ipynb)
 
+* Kaydedilmiş modellere ulaşmak için aşağıdaki linki kullanabilirsiniz.
+[Modeller](https://drive.google.com/drive/folders/1Wni5jOcrAp7GTONO5Sx079JFlXfYWQPQ?usp=sharing)
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/confmatrix.png" alt="alt text" width="520" height="280">
 
