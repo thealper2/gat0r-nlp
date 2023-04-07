@@ -37,6 +37,7 @@ more-itertools==9.1.0
 ```
 
 ### :crocodile: Kodların Çalıştırılması
+---
 
 * Kodları aşağıdaki kodları yazarak çalıştırabilirsiniz.
 
