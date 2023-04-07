@@ -51,7 +51,8 @@ more-itertools==9.1.0
 
 ### :crocodile: Veri setini inceleyelim.
 ---
-
+* Veri setine aşağıdaki linkden ulaşabilirsiniz. <br/>
+[Veri Seti](https://raw.githubusercontent.com/thealper2/gat0r-nlp/main/datasets/teknofest_train.csv)
 * Veri Setimizde 2081'i **SEXIST**, 2033'ü **RACIST**, 2376'sı **PROFANITY**, 2393'ü **INSULT**, 3584'ü **OTHER** kategorisinde olmak üzere12617 adet veri bulunmaktadır. 
 
 | # |  Column   |Non-Null| Count|  Dtype |
@@ -66,9 +67,6 @@ more-itertools==9.1.0
 * %28.7 si Other sınıfının içerisindeyken %71.3'ü Irkçı, Cinsiyetçi, Sexist,Küfür sınıfının içerisindedir.
 
 <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img2.png" alt="alt text" width="620" height="280" >
-
-* Veri setine aşağıdaki linkden ulaşabilirsiniz.
-[Veri Seti](https://raw.githubusercontent.com/thealper2/gat0r-nlp/main/datasets/teknofest_train.csv)
 
 ### :crocodile: Veri Ön İşleme
 ---
