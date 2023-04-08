@@ -48,6 +48,8 @@ python3 bert_uncased-with-stopwords.py
 python3 gradio.py
 # Flask servisini çalıştırmak için
 python3 flask.py
+# Streamlit servisini çalıştırmak için
+python3 streamlit.py
 
 ```
 * Gerekli kütüphaneleri kurmak için aşağıdaki kodu çalıştırabilirsiniz.
