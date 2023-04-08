@@ -1,7 +1,8 @@
 # :crocodile: GAT0R - Türkçe Doğal Dil İşleme Ekibi
 ---
-
-<img  src="https://github.com/thealper2/gat0r-nlp/blob/main/flask/logo.jpg" alt="alt text" width="320" height="280">
+<div align="center">
+ <img  src="https://github.com/thealper2/gat0r-nlp/blob/main/flask/logo.jpg" alt="alt text" width="320" height="280">
+</div
 
 *Bu çalışma, Teknofest 2023 Türkçe Doğal Dil İşleme yarışması kategorisinde "Aşağılayıcı Dil Tespiti" için geliştirilmiştir.*
 ### :crocodile: Amaç
@@ -83,13 +84,15 @@ pip3 install -r requirements.txt
 | 1 | text     |12617 |non-null   |object |
 |2  | is_offensive|12617 |non-null |int64 |
 |3  | target  |12617 |non-null |object|
+
+<div align="center">
+ <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img1.png" alt="alt text" width="320" height="280">
+</div>
  
-<img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img1.png" alt="alt text" width="320" height="280">
-
 * %28.7 si Other sınıfının içerisindeyken %71.3'ü Irkçı, Cinsiyetçi, Sexist,Küfür sınıfının içerisindedir.
-
-<img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img2.png" alt="alt text" width="620" height="280" >
-
+<div align="center">
+ <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img2.png" alt="alt text" width="620" height="280" >
+</div>
 ### :crocodile: Veri Ön İşleme
 ---
 Aşağıdaki python kodu ile verisetimize ön işleme adımları uyguluyoruz.
@@ -133,8 +136,9 @@ df = df.drop(['id', 'text', 'target'], axis=1)
 !pip install transformers
 ```
 * "Name Mapping" işleminden sonra veri setimizin ilk 5 elemanı inceleyelim.
-
-<img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img0.png">
+<div align="center">
+ <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img0.png"> 
+</div>
 
 * LabelEncoder işleminden sonra her bir kategoriyi temsil eden sayılar;
 - 0: INSULT
@@ -213,7 +217,9 @@ print(len(df_train), len(df_validation), len(df_test))
 
 * Modelimizin tahmin işleminden sonra oluşan sonucu görebilmek için **plot_confusion_matrix** fonksiyonumuzu kullanıyoruz.
 
-<img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/confmatrix.png" alt="confusion matrix">
+<div align="center">
+ <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/confmatrix.png" alt="confusion matrix">
+</div>
 
 ### :crocodile: Modeli Kaydedelim
 ---
@@ -262,8 +268,9 @@ Proje gelişimi boyunca, BERTurk'ün *cased* ve *uncased* versiyonları kullanı
 
 Flask kullanarak girilen metnin sınıflandırmasını yapan bir uygulama geliştirdik. [Buradan](https://github.com/thealper2/gat0r-nlp/blob/main/images/flask-video.mp4) demo videomuzu izleyebilirsiniz.
 
-<img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/flask-resim.png?raw=true" alt="flask uygulamasi">
-
+<div align="center">
+ <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/flask-resim.png?raw=true" alt="flask uygulamasi">
+</div>
 
 ### :crocodile: HuggingFace Spaces
 ---
@@ -272,14 +279,18 @@ Flask kullanarak girilen metnin sınıflandırmasını yapan bir uygulama geliş
 [Gradio](https://huggingface.co/spaces/thealper2/gat0r-gradio)<br/>
 [Kaynak Kodu](https://github.com/thealper2/gat0r-nlp/blob/main/NLPEvaluation_GAT0R.py)
 
-<img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/huggingface-gradio.png?raw=true" alt="gradio">
-
+<div align="center">
+ <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/huggingface-gradio.png?raw=true" alt="gradio">
+</div>
+ 
 * Modelimizin Streamlit servisine aşağıdaki linkten ulaşabilirsiniz.<br/>
 [Streamlit](https://huggingface.co/spaces/thealper2/gat0r-streamlit)
 [Kaynak Kodu](https://github.com/thealper2/gat0r-nlp/blob/main/streamlit/app.py)
 
-<img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/streamlit.png?raw=true" alt="streamlit">
-
+<div align="center">
+ <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/streamlit.png?raw=true" alt="streamlit">
+</div>
+ 
 ### :crocodile: Kaynaklar
 ---
 
