@@ -5,6 +5,7 @@
 </div
 
 *Bu çalışma, Teknofest 2023 Türkçe Doğal Dil İşleme yarışması kategorisinde "Aşağılayıcı Dil Tespiti" için geliştirilmiştir.*
+
 ### :crocodile: Amaç
 ---
 
@@ -93,8 +94,10 @@ pip3 install -r requirements.txt
 <div align="center">
  <img src="https://github.com/thealper2/gat0r-nlp/blob/main/images/img2.png" alt="alt text" width="620" height="280" >
 </div>
+
 ### :crocodile: Veri Ön İşleme
 ---
+
 Aşağıdaki python kodu ile verisetimize ön işleme adımları uyguluyoruz.
 
 ```python
